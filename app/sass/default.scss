@@ -57,9 +57,13 @@ p {
 }
 
 button {
+	width: 220px;
+	height: 56px;
+	border-radius: 16px;
 	padding: 0;
 	border: none;
 	color: inherit;
 	background-color: transparent;
 	@include font(16px, 500, 28px, $white);
 }
+

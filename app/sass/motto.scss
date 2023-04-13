@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+.motto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $indents * 25;
+
+    // .motto__img {
+    //     img {
+
+    //     }
+    // }
+
+    .motto__text {
+        padding-left: $indents * 25;
+
+        .motto__title {
+            h2 {
+                span {
+                    color: $yellow;
+                }
+            }
+        }
+        .motto__desc {
+            margin-top: $indents * 8;
+        }
+    }
+}

@@ -16,12 +16,8 @@
         .hero__buttons {
             padding-top: $indents * 14;
 
-            .hero__item {
-                width: 40%;
-                height: 56px;
-                border-radius: 16px;
-            }
-            .yellow-button {
+            .hero__first-item {
+                width: 190px;
                 background-color: $yellow;
                 z-index: 3;
 
@@ -29,10 +25,9 @@
                     background-color: lighten($color: $yellow, $amount: 10);
                 }
             }
-            .video-button {
+            .hero__second-item {
                 border: 1px solid $white;
                 margin-left: $indents * 2;
-                width: 50%;
 
                 i {
                     margin: $indents;
