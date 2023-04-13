@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero__text {
+        .hero__title {
+        }
+
+        .hero__desc {
+            padding-top: $indents * 5;
+        }
+
+        .hero__buttons {
+            padding-top: $indents * 14;
+
+            .hero__item {
+                width: 40%;
+                height: 56px;
+                border-radius: 16px;
+            }
+            .yellow-button {
+                background-color: $yellow;
+                z-index: 3;
+
+                &:hover {
+                    background-color: lighten($color: $yellow, $amount: 10);
+                }
+            }
+            .video-button {
+                border: 1px solid $white;
+                margin-left: $indents * 2;
+                width: 50%;
+
+                i {
+                    margin: $indents;
+                }
+
+                &:hover {
+                    color: $black;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .hero__img {
+        width: 65%;
+    }
+}

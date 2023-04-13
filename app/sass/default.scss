@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 	font-family: "Poppins", sans-serif;
 }
 
@@ -17,6 +17,10 @@ html,
 	background-color: $black;
 }
 
+.main {
+	margin-top: 500px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -26,10 +30,36 @@ li {
 	list-style-type: none;
 }
 
-
 .container {
 	width: 1280px;
 	max-width: 90%;
 	margin: 0 auto;
 }
 
+h1 {
+	@include font(72px, 600, 86px, $white);
+}
+
+h2 {
+	@include font(48px, 700, 72px, $white);
+}
+
+h3 {
+	@include font(32px, 600, 56px, $white);
+}
+
+h4 {
+	@include font(18px, 600, 30px, $white);
+}
+
+p {
+	@include font(16px, 500, 28px, $grey);
+}
+
+button {
+	padding: 0;
+	border: none;
+	color: inherit;
+	background-color: transparent;
+	@include font(16px, 500, 28px, $white);
+}
