@@ -25,7 +25,7 @@ gulp.task("sass", function () {
     .pipe(rename({ suffix: ".min", prefix: "" })) // rename
     .pipe(cleanCSS()) // clean css
     .pipe(autoprefixer({ browserlist: ["last 10 versions"], cascade: false })) // autoprefixer
-    .pipe(gulp.dest("app/css")) // Путь к папке с конечными файлами
+    .pipe(gulp.dest("docs/css")) // Путь к папке с конечными файлами
     .pipe(browserSync.reload({ stream: true }));
 });
  

@@ -20,10 +20,7 @@ html,
 
 a {
 	text-decoration: none;
-
-	&:hover {
-		@include animation(0.3s, ease-in-out, );
-	}
+	@include animation(0.3s, ease-in-out, );
 }
 
 ul,
@@ -66,9 +63,6 @@ button {
 	color: inherit;
 	background-color: transparent;
 	@include font(16px, 500, 28px, $white);
-
-	&:hover {
-		@include animation(0.3s, ease-in-out, );
-	}
+	@include animation(0.3s, ease-in-out, );
 }
 
