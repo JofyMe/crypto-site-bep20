@@ -1,14 +1,19 @@
 // DEFAULT
-@import "default.scss";
+@import "mixins.scss";
 @import "variables.scss";
+@import "default.scss";
 
-//PAGE
+//HEADER
 @import "header.scss";
-@import "hero.scss";
-@import "about.scss";
-@import "motto.scss";
-@import "offer.scss";
-@import "learn.scss";
-@import "platform.scss";
+
+//INDEX
+@import "index.scss";
+
+//FOOTER
+@import "footer.scss";
+
+
+
+
 
 

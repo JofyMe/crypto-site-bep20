@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+// MIXINS
+@mixin font($fs, $fw, $lh, $color) {
+	font-size: $fs;
+	font-weight: $fw;
+	line-height: $lh;
+	color: $color;
+}
+
+@mixin animation($time, $style, $properties...) {
+	@if length($properties) > 0 {
+		transition: $properties $time $style;
+	}
+	transition: all $time $style;
+}
+

@@ -4,14 +4,12 @@ $white: #F9F9F9;
 $black: #1E252B;
 $light-black: rgba(40, 48, 54, 0.3);
 $grey: #ADB0B6;
-
 $yellow: #F7A501;
 
 
 // SIGNS
-
 $background-color: $black;
-$indents: 5px;
+$indents: 4px;
 
 // BREAK POINTS
 $bp-1200px: 1200px;
@@ -21,13 +19,7 @@ $bp-768px: 768px;
 $bp-480px: 480px;
 $bp-320px: 320px;
 
-// MIXINS
-@mixin font($fs, $fw, $lh, $color) {
-	font-size: $fs;
-    font-weight: $fw;
-	line-height: $lh;
-	color: $color;
-  }
+
 
 
 

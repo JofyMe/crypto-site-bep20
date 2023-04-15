@@ -1,3 +1,4 @@
+@import "mixins.scss";
 @import "variables.scss";
 
 header {
@@ -22,16 +23,17 @@ header {
                 display: flex;
 
                 .header__item {
-                    padding-left: $indents * 12;
+                    padding-left: $indents * 18;
 
                     .header__link {
                         color: $white;
+
+                        &:hover {
+                            color: $yellow;
+                        }
                     }
 
-                    .header__link:hover {
-                        color: $yellow;
-                        transition: 0.3s;
-                    }
+
                 }
             }
         }
