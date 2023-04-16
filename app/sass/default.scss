@@ -21,6 +21,7 @@ html,
 a {
 	text-decoration: none;
 	@include animation(0.3s, ease-in-out, );
+
 }
 
 ul,
@@ -51,7 +52,7 @@ h4 {
 }
 
 p {
-	@include font(16px, 500, 28px, $grey);
+	@include font(16px, 500, 28px, $light-grey);
 }
 
 button {

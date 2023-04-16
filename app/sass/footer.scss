@@ -1,4 +1,98 @@
 @import "mixins.scss";
 @import "variables.scss";
 
+#footer {
+    .footer {
+        .footer__upper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            border-top: 1px solid #333a3f;
+            padding: $indents * 10 0 $indents * 20 0;
 
+            .footer__social {
+                grid-area: 1 / 1 / 2 / 2;
+
+                .footer__nav {
+                    .footer__ul {
+                        display: flex;
+                        .footer__item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: $indents * 10;
+
+                            .footer__link {
+                                background-color: #333a3f;
+                                padding: $indents * 3;
+                                border-radius: $indents;
+                                margin-right: $indents * 3;
+
+                                &:hover {
+                                    background-color: $blue;
+                                }
+
+                                img {
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer__nav {
+                grid-area: 1 / 2 / 2 / 4;
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+
+                .footer__nav-colum {
+                    color: $white;
+
+                    .footer__nav-title {
+                        margin-bottom: $indents * 5;
+                    }
+                    .footer__nav-link {
+                        display: flex;
+                        color: $light-grey;
+                        margin-bottom: $indents * 3;
+
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__downer {
+            display: flex;
+            justify-content: space-between;
+            padding: $indents * 6 0;
+            border-top: 1px solid #333a3f;
+
+            .footer__copyright {
+                .footer__copyright-link {
+                    color: $white;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+            .footer__document {
+                .footer__document-link {
+                    color: $white;
+                    padding-left: $indents * 12;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+                display: flex;
+            }
+        }
+    }
+}
