@@ -6,8 +6,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 1200px) {
+        text-align: center;
+        padding-top: 20%;
+        flex-wrap: wrap;
+    }
 
     .hero__text {
+        .hero__title {
+            @media only screen and (max-width: 480px) {
+                margin-top: 10%;
+                font-size: 48px;
+                line-height: normal;
+            }
+        }
+
         .hero__desc {
             padding-top: $indents * 5;
         }
@@ -18,6 +31,14 @@
             .hero__first-item {
                 width: 190px;
                 background-color: $yellow;
+                margin-right: $indents * 2;
+                @media only screen and (max-width: 1200px) {
+                    width: 40%;
+                    margin-top: $indents * 2;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 80%;
+                }
 
                 &:hover {
                     background-color: lighten($color: $yellow, $amount: 10);
@@ -25,7 +46,6 @@
             }
             .hero__second-item {
                 border: 1px solid $white;
-                margin-left: $indents * 2;
 
                 i {
                     margin: $indents;
@@ -35,12 +55,31 @@
                     color: $black;
                     background-color: $white;
                 }
+
+                @media only screen and (max-width: 1200px) {
+                    width: 40%;
+                    margin-top: $indents * 2;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 80%;
+                }
             }
         }
     }
 
     .hero__img {
-        width: 65%;
+        width: 60%;
+
+        img {
+            width: 100%;
+        }
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+            margin-top: $indents * 2;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -50,8 +89,16 @@
     background-color: #2c353d;
     border-radius: $indents * 6;
 
+    @media only screen and (max-width: 992px) {
+        flex-wrap: wrap;
+    }
+
     .about__text {
         margin: $indents * 18 $indents * 25 $indents * 18 $indents * 25;
+
+        @media only screen and (max-width: 768px) {
+            margin: $indents * 6 $indents * 8 $indents * 6 $indents * 8;
+        }
 
         .about__title {
             margin-top: $indents * 5;
@@ -62,9 +109,15 @@
         }
 
         .about__button {
-            width: 60%;
             margin-top: $indents * 10;
             border: 1px solid $white;
+
+            @media only screen and (max-width: 992px) {
+                width: 60%;
+            }
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+            }
 
             &:hover {
                 color: $black;
@@ -76,6 +129,12 @@
         margin: $indents * 18 $indents * 25 $indents * 18 0px;
         padding-left: $indents * 25;
         border-left: 4px solid #333e49;
+
+        @media only screen and (max-width: 992px) {
+            margin: $indents * 6 $indents * 8 $indents * 6 $indents * 8;
+            padding: 0;
+            border: none;
+        }
     }
 }
 
@@ -85,12 +144,6 @@
     justify-content: center;
     align-items: center;
     margin-top: $indents * 25;
-
-    // .motto__img {
-    //     img {
-
-    //     }
-    // }
 
     .motto__text {
         padding-left: $indents * 25;
@@ -121,6 +174,11 @@
 
             .offer__title {
                 margin-top: $indents * 10;
+
+                @media only screen and (max-width: 480px) {
+                    font-size: 32px;
+                    line-height: normal;
+                }
             }
 
             .offer__disc {
@@ -136,7 +194,20 @@
             grid-row-gap: $indents * 5;
             margin-top: $indents * 20;
 
+            @media only screen and (max-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            @media only screen and (max-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 1fr);
+            }
+
             .offer__blockchain-img {
+                width: 100%;
                 height: 240px;
                 background: $black;
                 border-radius: $indents * 5;
@@ -181,7 +252,18 @@
     flex-wrap: wrap;
 
     .platform__text {
-        max-width: 450px;
+        max-width: 420px;
+
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            margin-top: 10%;
+            .platform__title {
+                font-size: 32px;
+                line-height: normal;
+            }
+        }
 
         .platform__desc {
             margin-top: $indents * 6;
@@ -189,6 +271,16 @@
     }
     .platform__img {
         margin-left: auto;
+        width: 50%;
+
+        @media only screen and (max-width: 992px) {
+            margin: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 
     .platform__benefits {
@@ -199,6 +291,15 @@
             grid-column-gap: $indents * 5;
             grid-row-gap: $indents * 5;
             margin-top: $indents * 12;
+
+            @media only screen and (max-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                grid-column-gap: $indents * 5;
+                grid-row-gap: $indents * 5;
+                margin-top: $indents * 12;
+            }
 
             .platform__item {
                 padding: $indents * 10;
@@ -230,6 +331,12 @@
         text-align: center;
 
         .tokens__text {
+            .tokens__title {
+                @media only screen and (max-width: 480px) {
+                    font-size: 32px;
+                    line-height: normal;
+                }
+            }
             .tokens__desc {
                 margin-top: $indents * 5;
             }
@@ -242,6 +349,12 @@
             grid-row-gap: $indents * 8;
             margin-top: $indents * 40;
 
+            @media only screen and (max-width: 992px) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+            }
+
             .tokens__item {
                 padding: $indents;
                 background-color: $black;
@@ -250,8 +363,6 @@
                 .tokens__item-img {
                     position: relative;
                     top: -36px;
-                }
-                .tokens__item-title {
                 }
             }
         }
@@ -264,7 +375,15 @@
             padding: $indents * 10;
             margin: $indents * 20 auto 0 auto;
 
+            @media only screen and (max-width: 480px) {
+                padding: $indents * 5;
+            }
+
             .tokens__notification-text {
+                @media only screen and (max-width: 480px) {
+                    font-size: 16px;
+                    line-height: normal;
+                }
                 span {
                     color: $yellow;
                 }
@@ -284,6 +403,15 @@
         border-radius: $indents * 5;
         padding: $indents * 16;
         text-align: center;
+        @media only screen and (max-width: 480px) {
+            padding: $indents * 8;
+        }
+        .lure__title {
+            @media only screen and (max-width: 480px) {
+                font-size: 24px;
+                line-height: normal;
+            }
+        }
 
         .lure__desc {
             margin-top: $indents * 3;
@@ -304,4 +432,3 @@
         }
     }
 }
-

@@ -8,6 +8,7 @@ header {
     opacity: 0.95;
     display: flex;
     position: fixed;
+    z-index: 2;
 
     .header {
         display: flex;
@@ -16,14 +17,17 @@ header {
         color: $white;
 
         .header__navbar {
+            width: 100%;
+            margin-left: $indents * 20;
             display: flex;
             align-items: center;
 
             .header__menu {
+                width: 100%;
                 display: flex;
+                justify-content: space-around;
 
                 .header__item {
-                    padding-left: $indents * 18;
 
                     .header__link {
                         color: $white;
@@ -32,8 +36,6 @@ header {
                             color: $yellow;
                         }
                     }
-
-
                 }
             }
         }
