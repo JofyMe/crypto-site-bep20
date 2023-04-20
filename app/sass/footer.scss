@@ -1,6 +1,6 @@
 @import "mixins.scss";
 @import "variables.scss";
- 
+
 .footer {
   width: 100%;
   background-color: $black;
@@ -18,12 +18,12 @@
       border-top: 1px solid rgba(#fff, 0.1);
       border-bottom: 1px solid rgba(#fff, 0.1);
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: $bp-992px) {
         flex-direction: column;
         align-items: center;
       }
       .footer__about {
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: $bp-992px) {
           text-align: center;
         }
         .footer__social {
@@ -61,11 +61,11 @@
         justify-content: space-around;
         margin-left: 50px;
         flex-grow: 1;
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: $bp-992px) {
           margin: 22px 0 0 0;
           width: 100%;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $bp-768px) {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(2, 1fr);
@@ -100,11 +100,11 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 22px;
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: $bp-480px) {
         flex-direction: column;
       }
       &-copyright {
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $bp-480px) {
           order: 1;
           margin-top: 32px;
         }
@@ -115,7 +115,7 @@
         }
       }
       &-links {
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $bp-480px) {
           order: 0;
         }
         a {

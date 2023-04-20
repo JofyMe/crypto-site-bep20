@@ -6,9 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
+    padding-top: 5%;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: $bp-1200px) {
         text-align: center;
         padding-top: 20%;
         flex-wrap: wrap;
@@ -16,7 +16,7 @@
 
     .hero__text {
         .hero__title {
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: $bp-480px) {
                 margin-top: 10%;
                 font-size: 48px;
                 line-height: normal;
@@ -34,11 +34,11 @@
                 width: 190px;
                 background-color: $yellow;
                 margin-right: $indents * 2;
-                @media only screen and (max-width: 1200px) {
+                @media only screen and (max-width: $bp-1200px) {
                     width: 40%;
                     margin-top: $indents * 2;
                 }
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: $bp-768px) {
                     width: 80%;
                 }
 
@@ -58,11 +58,11 @@
                     background-color: $white;
                 }
 
-                @media only screen and (max-width: 1200px) {
+                @media only screen and (max-width: $bp-1200px) {
                     width: 40%;
                     margin-top: $indents * 2;
                 }
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: $bp-768px) {
                     width: 80%;
                 }
             }
@@ -75,7 +75,7 @@
         img {
             width: 100%;
         }
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             width: 100%;
             margin-top: $indents * 2;
             img {
@@ -91,15 +91,19 @@
     background-color: #2c353d;
     border-radius: $indents * 6;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: $bp-1200px) {
         flex-wrap: wrap;
     }
 
     .about__text {
         margin: $indents * 18 $indents * 25 $indents * 18 $indents * 25;
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             margin: $indents * 6 $indents * 8 $indents * 6 $indents * 8;
+        }
+        .about__img {
+            width: 100px;
+            height: 100px;
         }
 
         .about__title {
@@ -114,10 +118,10 @@
             margin-top: $indents * 10;
             border: 1px solid $white;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: $bp-1200px) {
                 width: 60%;
             }
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: $bp-480px) {
                 width: 100%;
             }
 
@@ -132,7 +136,7 @@
         padding-left: $indents * 25;
         border-left: 4px solid #333e49;
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             margin: $indents * 6 $indents * 8 $indents * 6 $indents * 8;
             padding: 0;
             border: none;
@@ -147,7 +151,7 @@
     align-items: center;
     margin: 100px auto;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: $bp-1200px) {
         flex-wrap: wrap-reverse;
     }
 
@@ -155,9 +159,9 @@
         width: 300%;
 
         img {
-            width: 125%;
+            width: 110%;
         }
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             width: 100%;
 
             img {
@@ -169,18 +173,18 @@
     .motto__text {
         padding-left: $indents * 25;
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             padding: 0;
         }
         .motto__title {
             h2 {
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: $bp-768px) {
                     font-size: 36px;
                     line-height: normal;
                     padding: 0;
                 }
 
-                @media only screen and (max-width: 480px) {
+                @media only screen and (max-width: $bp-480px) {
                     font-size: 28px;
                 }
 
@@ -209,7 +213,7 @@
             .offer__title {
                 margin-top: $indents * 10;
 
-                @media only screen and (max-width: 480px) {
+                @media only screen and (max-width: $bp-480px) {
                     font-size: 32px;
                     line-height: normal;
                 }
@@ -228,13 +232,13 @@
             grid-row-gap: $indents * 5;
             margin-top: $indents * 20;
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: $bp-1200px) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(4, 1fr);
             }
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: $bp-768px) {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(8, 1fr);
@@ -264,7 +268,7 @@
         width: 50%;
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: $bp-1200px) {
         flex-wrap: wrap-reverse;
         
         img {
@@ -278,7 +282,7 @@
         max-width: 450px;
         margin-left: auto;
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: $bp-1200px) {
             width: 100%;
             max-width: 100%;
             margin: 0;
@@ -304,7 +308,7 @@
     .platform__text {
         max-width: 420px;
 
-        @media only screen and (max-width: 992px) {
+        @media only screen and (max-width: $bp-992px) {
             width: 100%;
             max-width: 100%;
             text-align: center;
@@ -323,7 +327,7 @@
         margin-left: auto;
         width: 50%;
 
-        @media only screen and (max-width: 992px) {
+        @media only screen and (max-width: $bp-992px) {
             margin: 0;
             width: 100%;
         }
@@ -342,7 +346,7 @@
             grid-row-gap: $indents * 5;
             margin-top: $indents * 12;
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: $bp-768px) {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(4, 1fr);
@@ -382,7 +386,7 @@
 
         .tokens__text {
             .tokens__title {
-                @media only screen and (max-width: 480px) {
+                @media only screen and (max-width: $bp-480px) {
                     font-size: 32px;
                     line-height: normal;
                 }
@@ -399,7 +403,7 @@
             grid-row-gap: $indents * 8;
             margin-top: $indents * 40;
 
-            @media only screen and (max-width: 992px) {
+            @media only screen and (max-width: $bp-992px) {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(3, 1fr);
@@ -413,6 +417,8 @@
                 .tokens__item-img {
                     position: relative;
                     top: -36px;
+                    width: 120px;
+                    height: 120px;
                 }
             }
         }
@@ -425,12 +431,12 @@
             padding: $indents * 10;
             margin: $indents * 20 auto 0 auto;
 
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: $bp-480px) {
                 padding: $indents * 5;
             }
 
             .tokens__notification-text {
-                @media only screen and (max-width: 480px) {
+                @media only screen and (max-width: $bp-480px) {
                     font-size: 16px;
                     line-height: normal;
                 }
@@ -453,11 +459,11 @@
         border-radius: $indents * 5;
         padding: $indents * 16;
         text-align: center;
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: $bp-480px) {
             padding: $indents * 8;
         }
         .lure__title {
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: $bp-480px) {
                 font-size: 24px;
                 line-height: normal;
             }
