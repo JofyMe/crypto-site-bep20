@@ -28,7 +28,6 @@ header {
                 justify-content: space-around;
 
                 .header__item {
-
                     .header__link {
                         color: $white;
 
@@ -39,5 +38,104 @@ header {
                 }
             }
         }
+        .header__navbar.open {
+            display: flex;
+            margin: 0;
+        }
+
+        .header__burger {
+            display: none;
+            position: relative;
+            z-index: 50;
+            align-items: center;
+            justify-content: flex-end;
+            width: 30px;
+            height: 18px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background-color: #faf6f2;
+                transition: all 0.3s ease 0s;
+                top: 0;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background-color: $white;
+                transition: all 0.3s ease 0s;
+                bottom: 0;
+            }
+
+            span {
+                height: 2px;
+                width: 80%;
+                transform: scale(1);
+                background-color: $white;
+            }
+        }
+
+        .header__burger.active {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0, -50%);
+            }
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0, 50%);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header__burger {
+                display: flex;
+            }
+
+            .header__navbar {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                overflow-y: auto;
+                padding: 50px 40px;
+                background-color: $black;
+                animation: burgerAnimation 0.4s;
+
+                .header__menu {
+                    flex-direction: column;
+                    row-gap: 30px;
+                    height: 50%;
+                    align-items: center;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+/* Добавляем класс active для анимации иконки бургера */
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
