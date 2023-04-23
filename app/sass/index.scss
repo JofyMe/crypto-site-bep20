@@ -270,13 +270,11 @@
 
     @media only screen and (max-width: $bp-1200px) {
         flex-wrap: wrap-reverse;
-        
+
         img {
             width: 100%;
         }
     }
-
-
 
     .learn__text {
         max-width: 450px;
@@ -313,6 +311,7 @@
             max-width: 100%;
             text-align: center;
             margin-top: 10%;
+            
             .platform__title {
                 font-size: 32px;
                 line-height: normal;

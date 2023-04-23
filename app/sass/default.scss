@@ -64,6 +64,10 @@ li {
 	list-style-type: none;
 }
 
+details[open] > summary::after {
+    transform: rotate(45deg);
+  }
+
 .container {
 	width: 1280px;
 	max-width: 90%;
