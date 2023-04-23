@@ -1,14 +1,18 @@
 @import "mixins.scss";
 @import "variables.scss";
 
-.question {
-    text-align: center;
+details[open] > summary::after {
+    transform: rotate(45deg);
+  }
 
-    .question__title {
-        padding-top: 15%;
-    }
+    .question {
+        text-align: center;
 
-    @media only screen and (max-width: 768px) {
+        .question__title {
+            padding-top: 15%;
+        }
+
+    @media only screen and (max-width: $bp-768px) {
         .question__title {
             padding-top: 25%;
             line-height: normal;
@@ -45,7 +49,7 @@
             .question__item-content {
                 margin: 30px 60px 30px 60px;
             }
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: $bp-768px) {
                 .question__item-content {
                     margin: 20px;
                 }
