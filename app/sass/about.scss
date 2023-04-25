@@ -1,2 +1,77 @@
 @import "variables.scss";
 @import "mixins.scss";
+
+.hero-about {
+  display: grid;
+  padding-top: 80px;
+
+  &__upper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $bp-992px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-about__text {
+      .hero-about__title {
+        span {
+          color: $yellow;
+        }
+      }
+      .hero-about__desc {
+        margin-top: 20px;
+      }
+    }
+    .hero-about__img {
+      width: 70%;
+      margin: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__lower {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    border-top: 4px solid $grey;
+    margin-top: 40px;
+
+    @media screen and (max-width: $bp-992px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-about__text {
+      p {
+        padding: 40px 80px 80px 0px;
+      }
+
+      @media screen and (max-width: $bp-992px) {
+        p {
+          padding: 40px 0px 0px 0px;
+        }
+      }
+    }
+    .hero-about__text:last-child {
+      p {
+        padding: 40px 0px 80px 0px;
+      }
+      @media screen and (max-width: $bp-992px) {
+        p {
+          padding: 40px 0px 0px 0px;
+        }
+      }
+    }
+  }
+}
