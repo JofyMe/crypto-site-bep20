@@ -75,3 +75,43 @@
     }
   }
 }
+
+.usblock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: #283036;
+  box-shadow: 0 20px 0 -10px #343b40;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 5%;
+  border-radius: 24px;
+
+  @media screen and (max-width: $bp-992px) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 10%;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text {
+    padding: 10%;
+    .usblock__title {
+      @media screen and (max-width: $bp-992px) {
+        font-size: 32px;
+      }
+    }
+    .usblock__desc {
+      margin-top: 24px;
+    }
+  }
+}
