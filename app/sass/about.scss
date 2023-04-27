@@ -3,7 +3,8 @@
 
 .hero-about {
   display: grid;
-  padding-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 60px;
 
   &__upper {
     display: grid;
@@ -99,7 +100,7 @@
     padding: 10%;
     margin: auto;
 
-        width: 70%;
+    width: 70%;
 
     img {
       width: 100%;

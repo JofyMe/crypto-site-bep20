@@ -10,13 +10,20 @@
   padding-top: 120px;
   padding-bottom: 60px;
 
-
+  @media screen and (max-width: $bp-992px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 
   &--end {
     border-top: 3px solid $grey;
     padding-top: 20px;
 
-
+    @media screen and (max-width: $bp-992px) {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__text {
