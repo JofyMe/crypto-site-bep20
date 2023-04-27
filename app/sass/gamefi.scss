@@ -1,0 +1,60 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.gamefi {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+
+
+  &--end {
+    border-top: 3px solid $grey;
+    padding-top: 20px;
+
+
+  }
+
+  &__text {
+    .gamefi__title {
+      span {
+        color: $yellow;
+      }
+    }
+    .gamefi__subtitle {
+      margin-top: 20px;
+    }
+    .gamefi__desc {
+      margin-top: 30px;
+      br {
+      }
+    }
+    .gamefi__button {
+      width: 190px;
+      border: 1px solid $white;
+      margin-top: 30px;
+      &:hover {
+        color: $black;
+        background-color: $white;
+        font-weight: 700;
+      }
+    }
+  }
+  &__img {
+    padding: 10%;
+    display: grid;
+
+    img[alt="main"] {
+      width: 70%;
+      margin: auto;
+    }
+    img[alt="strategy"] {
+      width: 100%;
+      margin: auto;
+    }
+  }
+}

@@ -34,6 +34,7 @@
                 width: 190px;
                 background-color: $yellow;
                 margin-right: $indents * 2;
+                
                 @media only screen and (max-width: $bp-1200px) {
                     width: 40%;
                     margin-top: $indents * 2;
