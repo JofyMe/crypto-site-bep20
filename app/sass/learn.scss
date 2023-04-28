@@ -17,6 +17,7 @@
 
   &__img {
     width: 100%;
+    margin-top: 40px;
     img {
       width: 100%;
     }
@@ -47,25 +48,53 @@
   grid-column-gap: 10%;
 
   background: #283036;
+  box-shadow: 0 20px 0 -10px #343b40;
   border-radius: 24px;
 
-  padding: 5%;
+  padding: 2% 6%;
+  margin: 10% auto;
+
+  @media screen and (max-width: $bp-992px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 
   &__info {
     position: relative;
+
+    @media screen and (max-width: $bp-992px) {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      grid-area: 1 / 1 / 2 / 2;
+    }
 
     .gamers__img {
       img {
         width: 100%;
         max-width: 400px;
         position: absolute;
-        top: -140px;
+        top: -80px;
+
+        @media screen and (max-width: $bp-992px) {
+          margin-top: 15%;
+          position: relative;
+        }
+        @media screen and (max-width: $bp-480px) {
+          margin-top: 40px;
+        }
       }
     }
     .gamers__text {
-      margin-top: 60%;
+      margin-top: 90%;
+
+      @media screen and (max-width: $bp-992px) {
+        margin-top: 0%;
+        grid-area: 2 / 1 / 3 / 2;
+      }
 
       .gamers__titile {
+        font-weight: 600;
       }
       .gamers__desc {
         margin-top: 24px;
@@ -73,11 +102,17 @@
     }
   }
   &__list {
+    @media screen and (max-width: $bp-992px) {
+      margin-top: -10%;
+    }
+    @media screen and (max-width: $bp-480px) {
+      margin-top: -80px;
+    }
     .gamers__item {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
       grid-template-rows: 1fr;
-      padding: 10%;
+      padding: 10% 0%;
       border-top: 3px solid rgba(116, 143, 181, 0.15);
 
       &:first-child {
@@ -86,7 +121,7 @@
       .gamers__icon {
         grid-area: 1 / 1 / 2 / 2;
         margin-right: 30px;
-        
+
         img {
         }
       }
