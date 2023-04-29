@@ -49,7 +49,7 @@ details[open] > summary::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 4s ease-in-out;
 
   .spinner {
     width: 50px;
@@ -57,7 +57,7 @@ details[open] > summary::after {
     border-radius: 50%;
     border: 5px solid $light-black;
     border-top-color: $yellow;
-    animation: spin 1s ease-in-out infinite;
+    animation: spin 2s ease-in-out infinite;
   }
 }
 
