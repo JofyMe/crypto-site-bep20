@@ -1,0 +1,37 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.document {
+    .document__title {
+        padding-top: 100px;
+
+        @media only screen and (max-width: $bp-768px) {
+            padding-top: 100px;
+            font-size: 48px;
+        }
+    }
+
+    .document__subtitile {
+        margin-top: $indents * 15;
+
+        @media only screen and (max-width: $bp-768px) {
+            margin-top: $indents * 7;
+        }
+    }
+
+    .document__title-terms {
+        margin-top: $indents * 10;
+
+        @media only screen and (max-width: $bp-768px) {
+            font-size: 24px;
+        }
+    }
+
+    .document__subtitile-terms {
+        margin-top: $indents * 6;
+
+        &:last-child {
+            margin-bottom: 10%;
+        }
+    }
+}

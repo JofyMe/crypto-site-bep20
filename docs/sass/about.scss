@@ -1,0 +1,120 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.hero-about {
+  display: grid;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  &__upper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $bp-992px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-about__text {
+      .hero-about__title {
+        span {
+          color: $yellow;
+        }
+      }
+      .hero-about__desc {
+        margin-top: 20px;
+      }
+    }
+    .hero-about__img {
+      width: 70%;
+      margin: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__lower {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    border-top: 4px solid $grey;
+    margin-top: 40px;
+
+    @media screen and (max-width: $bp-992px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-about__text {
+      p {
+        padding: 40px 80px 80px 0px;
+      }
+
+      @media screen and (max-width: $bp-992px) {
+        p {
+          padding: 40px 0px 0px 0px;
+        }
+      }
+    }
+    .hero-about__text:last-child {
+      p {
+        padding: 40px 0px 80px 0px;
+      }
+      @media screen and (max-width: $bp-992px) {
+        p {
+          padding: 40px 0px 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+.usblock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: #283036;
+  box-shadow: 0 20px 0 -10px #343b40;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 5%;
+  border-radius: 24px;
+
+  @media screen and (max-width: $bp-992px) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 10%;
+    margin: auto;
+
+    width: 70%;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text {
+    padding: 10%;
+    .usblock__title {
+      @media screen and (max-width: $bp-992px) {
+        font-size: 32px;
+      }
+    }
+    .usblock__desc {
+      margin-top: 24px;
+    }
+  }
+}

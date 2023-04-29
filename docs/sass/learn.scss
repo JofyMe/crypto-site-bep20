@@ -1,0 +1,140 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.learn-hero {
+  padding-top: 120px;
+
+  &__title {
+    text-align: center;
+    @media screen and (max-width: $bp-768px) {
+      font-size: 48px;
+      line-height: normal;
+    }
+    span {
+      color: $yellow;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-top: 40px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10%;
+    margin: 80px 0;
+
+    @media screen and (max-width: $bp-768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .learn-hero__desc {
+    }
+  }
+}
+
+.gamers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10%;
+
+  background: #283036;
+  box-shadow: 0 20px 0 -10px #343b40;
+  border-radius: 24px;
+
+  padding: 2% 6%;
+  margin: 10% auto;
+
+  @media screen and (max-width: $bp-992px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__info {
+    position: relative;
+
+    @media screen and (max-width: $bp-992px) {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .gamers__img {
+      img {
+        width: 100%;
+        max-width: 400px;
+        position: absolute;
+        top: -80px;
+
+        @media screen and (max-width: $bp-992px) {
+          margin-top: 15%;
+          position: relative;
+        }
+        @media screen and (max-width: $bp-480px) {
+          margin-top: 40px;
+        }
+      }
+    }
+    .gamers__text {
+      margin-top: 90%;
+
+      @media screen and (max-width: $bp-992px) {
+        margin-top: 0%;
+        grid-area: 2 / 1 / 3 / 2;
+      }
+
+      .gamers__titile {
+        font-weight: 600;
+      }
+      .gamers__desc {
+        margin-top: 24px;
+      }
+    }
+  }
+  &__list {
+    @media screen and (max-width: $bp-992px) {
+      margin-top: -10%;
+    }
+    @media screen and (max-width: $bp-480px) {
+      margin-top: -80px;
+    }
+    .gamers__item {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 1fr;
+      padding: 10% 0%;
+      border-top: 3px solid rgba(116, 143, 181, 0.15);
+
+      &:first-child {
+        border-top: none;
+      }
+      .gamers__icon {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 30px;
+
+        img {
+        }
+      }
+      .gamers__text-item {
+        grid-area: 1 / 2 / 2 / 11;
+
+        .gamers__subtitle {
+          font-size: 24px;
+        }
+        .gamers__desc {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}

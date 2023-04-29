@@ -1,0 +1,62 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+details[open] > summary::after {
+    transform: rotate(45deg);
+  }
+
+    .question {
+        text-align: center;
+
+        .question__title {
+            padding-top: 15%;
+        }
+
+    @media only screen and (max-width: $bp-768px) {
+        .question__title {
+            padding-top: 25%;
+            line-height: normal;
+            font-size: 36px;
+        }
+    }
+    .question__list {
+        max-width: 900px;
+        margin: 5% auto;
+
+        .question__item {
+            margin-top: 20px;
+            text-align: left;
+
+            .question__item-header {
+                position: relative;
+                padding: 24px 48px 24px 24px;
+                color: white;
+                background-color: #2c353d;
+                border-radius: 10px;
+                &::marker {
+                    content: "";
+                }
+                &:after {
+                    content: "+";
+                    position: absolute;
+                    right: 24px;
+                    top: 20px;
+                    font-size: 24px;
+                    color: $yellow;
+                    transition: transform .5s;
+                }
+            }
+            .question__item-content {
+                margin: 30px 60px 30px 60px;
+            }
+            @media only screen and (max-width: $bp-768px) {
+                .question__item-content {
+                    margin: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,61 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.defi {
+  padding: 160px 0;
+
+  &__text {
+    display: grid;
+    justify-self: center;
+    align-items: center;
+
+    .defi__title {
+      max-width: 1000px;
+      margin: 0px auto;
+
+      @media screen and (max-width: $bp-992px) {
+        font-size: 48px;
+        line-height: normal;
+        max-width: 100%;
+      }
+      @media screen and (max-width: $bp-992px) {
+        font-size: 32px;
+      }
+
+      span {
+        color: $yellow;
+      }
+    }
+    .defi__desc {
+      max-width: 800px;
+      margin: 80px auto;
+
+      @media screen and (max-width: $bp-992px) {
+        max-width: 100%;
+      }
+    }
+  }
+  &__list {
+    max-width: 800px;
+    margin: 0 auto;
+    .defi__item {
+      margin: 80px auto auto;
+
+      .defi__img {
+        position: relative;
+        left: -35px;
+
+        &[alt="rock"] {
+          position: relative;
+          left: -15px;
+        }
+      }
+
+      .defi__subtitile {
+      }
+      .defi__desc {
+        margin-top: 25px;
+      }
+    }
+  }
+}
