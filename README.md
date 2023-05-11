@@ -29,7 +29,7 @@ Student mockup of a crypto site on the subject of bep20
 
 * **Oleg Tretiak** - *Initial work* - [JofyMe](https://github.com/JofyMe)
 
-See also the list of [contributors](https://github.com/JofyMe/visual-designer-portfolio/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JofyMe/crypto-site-bep20/graphs/contributors) who participated in this project.
 
 ## License
 
